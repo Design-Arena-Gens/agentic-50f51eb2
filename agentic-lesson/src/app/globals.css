@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #f4f6fb 0%, #ffffff 20%, #eef3ff 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+.slide-card {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 15px 30px rgba(15, 37, 99, 0.1);
+  border-radius: 1rem;
+  border: 1px solid rgba(46, 54, 117, 0.08);
+  padding: 2rem;
+  backdrop-filter: blur(6px);
+}
+
+.script-box {
+  background: #0f2563;
+  color: #f5f7ff;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  line-height: 1.6;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(38, 99, 225, 0.12);
+  color: #1f3f91;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+}
+
+.grid-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.98rem;
+}
+
+.grid-table th,
+.grid-table td {
+  border: 1px solid rgba(17, 24, 39, 0.1);
+  padding: 0.9rem 0.85rem;
+  vertical-align: top;
+}
+
+.grid-table th {
+  background: rgba(15, 37, 99, 0.1);
+  color: #0f2563;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+.pill {
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(12, 74, 110, 0.1);
+  color: #0c4a6e;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+.slide-number {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #3b82f6;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.slide-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 0.4rem;
+}
+
+.list-styled li {
+  margin-bottom: 0.55rem;
+  line-height: 1.6;
+}
+
+.script-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.questions-box {
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.85);
+  color: white;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+}
+
+.questions-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.questions-box li {
+  margin-bottom: 0.5rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.35rem;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: rgba(37, 99, 235, 0.2);
+  border-radius: 999px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 0.45rem;
+  left: -1.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #1d4ed8;
+  border-radius: 999px;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+.rubric {
+  display: grid;
+  gap: 1rem;
+}
+
+.rubric-level {
+  border-radius: 0.8rem;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.rubric-level h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.6rem;
+}
+
+.checklist {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.checklist-item {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.checklist-bullet {
+  min-width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 0.3rem;
+  background: rgba(37, 99, 235, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1d4ed8;
+  font-weight: 700;
+}
